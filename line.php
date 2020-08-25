@@ -21,7 +21,9 @@ if ( sizeof($request_array['events']) > 0 )
    if( $event['message']['type'] == 'text' )
    {
 		$text = $event['message']['text'];
-		
+	   
+		// start สถานการณ์โควิดวันนี้
+	   
 	   	if($text == "ชื่อ" || $text == "ชื่ออะไร" || $text == "ชื่ออะไรครับ" || $text == "ชื่ออะไรคะ"){
 			$reply_message = 'ชื่อของฉันคือ BOT-meow';
 		}
@@ -41,7 +43,17 @@ if ( sizeof($request_array['events']) > 0 )
      			$reply_message = $result;
      			$reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'} . ' ' . 'คน' . ' ' . 'รักษาหายแล้ว '. $obj->{'Recovered'} . ' ' . 'คน';
     		}
-		//$reply_message = '('.$text.') ได้รับข้อความเรียบร้อย!!';   
+	   	
+	   	// end สถานการณ์โควิดวันนี้
+	   	
+	   	// start CDMA
+	   	
+	   	if($text == "CDMA"){
+			$reply_message = '1,-3,-1,-1';
+		}
+		   
+	   	// end CDMA
+	   
    }
    else
     $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
