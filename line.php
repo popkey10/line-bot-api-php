@@ -49,7 +49,7 @@ if ( sizeof($request_array['events']) > 0 )
 	   	// start CDMA
 	   	
 	   	if($text == "CDMA"){
-			$reply_message = '1,-3,-1,-1';
+			$reply_message = '+1,-3,-1,-1';
 		}
 		   
 	   	// end CDMA
